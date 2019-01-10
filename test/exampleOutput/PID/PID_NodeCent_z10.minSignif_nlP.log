@@ -1,0 +1,3 @@
+The -log p-value threshold value was set to 0.97208568796540811359163758826577796359 - which was the closest match to FDR <= 0.106 
+The actual FDR at this threshold was estimated to be 0.105889843998727
+Resample iterations = 10

@@ -1,0 +1,10 @@
+Gaussian mixture model on NFCS scores from test/exampleOutputNew/NodeCentric/NodeCent_z10.FCS.txt:
+Fit:
+  Component(s):	3		Data points: 502
+  Log-likelihood: 15128.644	(AIC,BIC):   (-30241.29,-30207.54)
+  Initialisation: kmeans++	Model type:  V
+Components:
+
+  1. Proportion: 0.40	Mean: 0.00	Std Dev: 0.00
+  2. Proportion: 0.40	Mean: 2.63	Std Dev: 1.39
+  3. Proportion: 0.21	Mean: 6.37	Std Dev: 1.58

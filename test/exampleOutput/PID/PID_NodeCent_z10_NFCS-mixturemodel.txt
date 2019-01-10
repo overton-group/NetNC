@@ -1,0 +1,10 @@
+Gaussian mixture model on NFCS scores from test/exampleOutputNew/PID/PID_NodeCent_z10.FCS.txt:
+Fit:
+  Component(s):	3		Data points: 502
+  Log-likelihood: 15097.409	(AIC,BIC):   (-30178.82,-30145.07)
+  Initialisation: kmeans++	Model type:  V
+Components:
+
+  1. Proportion: 0.40	Mean: 0.00	Std Dev: 0.00
+  2. Proportion: 0.39	Mean: 2.61	Std Dev: 1.38
+  3. Proportion: 0.21	Mean: 6.34	Std Dev: 1.59
