@@ -7,6 +7,31 @@
 ## with the NetNC software in the file LICENSE.txt
 ## if not, see <http://www.gnu.org/licenses/>.
 
+##
+## QUICK START GUIDE
+##
+
+1) Ensure the dependencies are installed:
+a. Perl - Math::Pari
+b. R
+c. Python - networkx 1.8 and numpy
+
+2) Edit the paths at the top of NetNC_v2pt2.pl (the relevant lines have comments # EDIT THIS ...)
+
+3) Run the NetNC_v2pt2.pl script with relevant options, the two main modes are given below.
+a. 'FTI' analysis mode:
+NetNC_v2pt2.pl -n MyNetwork.txt -i NodeList.txt -o /path/to/my/outdir/fileprefix -F
+
+The final output (an edge list) will be in the file /path/to/my/outdir/fileprefix.FDRthresholded_mincutDensity0pt306_noDoublets.txt
+
+b. 'FBT' analysis mode:
+NetNC_v2pt2.pl -n MyNetwork.txt -i NodeList.txt -o /path/to/my/outdir/fileprefix -M
+
+The final output as a node list will be located at /path/to/my/outdir/fileprefix_NFCS-mixturemodel.coherentNodes
+A network from the node where edges have bonferroni corrected -log(p)<=0.05 is output to
+/path/to/my/outdir/fileprefix_NFCS-mixturemodel.coherentNet.txt
+
+Please see further details below
 
 ##
 ## INTRODUCTION
@@ -68,7 +93,7 @@ the path to your R installation and the NetNC home directory (this is the locati
 NetNC_v2pt2.pl and FCS.pl scripts)
 
 The lines to edit in NetNC_v2pt2.pl are indicated with comments near to the start of the 
-script. NetNC has been tested with perl v5.16, v5.18 and v5.20
+script. NetNC has been tested with perl v5.16, v5.18, v5.20 and v5.26
 
 2. Iterative Minimum cut - itercut.py
 
@@ -83,7 +108,7 @@ not compatible)
 More information is given in mincut/MinCut_README.txt
 
 3. The Gaussian mixture modelling requires R to be installed and has been 
-tested with R versions 3.0.2, 3.2.2, 3.3.0, 3.3.1 on Linux, but is expected 
+tested with R versions 3.0.2, 3.2.2, 3.3.0, 3.3.1, 3.6.3 on Linux, but is expected 
 to work on Mac OSX, Windows and with other recent versions of R.
 
 
@@ -104,7 +129,7 @@ NetNC_v2pt2.pl -n MyNetwork.txt -i NodeList.txt -o /path/to/my/outdir/fileprefix
 resampling (e.g. detected genes from a microarray experiment):
 NetNC_v2pt2.pl -n MyNetwork.txt -i NodeList.txt -o /path/to/my/outdir/fileprefix -E -M -l /path/to/backgroundGenelist.txt
 
--- Node centric analysis (including Gaussian Mixture Modelling) using background 
+-- Node centric analysis (including Gaussian Mixture Modelling) and using background 
 negative log p-values generated from a previous run of NetNC:
 NetNC_v2pt2.pl -n MyNetwork.txt -i NodeList.txt -o /path/to/my/outdir/fileprefix -M -p /path/to/my/outdir/fileprefix.BG.nlPonly.txt -z [resample_number]
 
@@ -425,4 +450,4 @@ minimum cut) and Alex Lubbock (Gaussian Mixture Modelling).
 If you use any of the code in this NetNC software distribution please cite:
 Overton IM, Sims A, Owen JA, Heale B, Ford M, Lubbock ALR, Pairo-Castineira E, Essafi E (2018).
 "Functionally Coherent Transcription Factor Target Networks Illuminate Control of Epithelial 
-Remodelling and Oncogenic Notch". BioRxiv 2018 https://doi.org/10.1101/455709.
+Remodelling and Oncogenic Notch". BioRxiv 2019 https://doi.org/10.1101/455709v5
