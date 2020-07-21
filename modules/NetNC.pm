@@ -468,7 +468,7 @@ sub fisher_contingency_uniq {
 	my %seen; # hash to prevent storing of repeat p-values
 	if ($contingency->{keepIDs}) {
 		my $out = $var->{output_location};
-		open (OO, ">$out.id1_id2_nlp.txt"); 	
+		open (OO, ">$out.id1_id2_nlp.txt") or die "cant open output file $out.id1_id2_nlp.txt $!\n";
 		foreach my $co (@data) {
 			my ($n11, $n1p, $np1, $npp) = split (/\t/, $co);
 			my $p_value = Statistics::FishersExactTest::fishers_exact($n11, $n1p, $np1, $npp);
@@ -554,7 +554,7 @@ sub resample_network {
 		# if a precalculated sampling file is provided then read it in
 		if ($var->{resample_file}) {
 			my $sample_file = $var->{resample_file};
-			open (A, $sample_file);
+			open (A, $sample_file) or die "cant open $sample_file $!\n";
 			my $iteration;
 			while (<A>) {
 				chomp();
