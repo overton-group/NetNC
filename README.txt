@@ -22,16 +22,16 @@ c. Python - networkx 1.8 and numpy
 a. 'FTI' analysis mode:
 NetNC_v2pt2.pl -n MyNetwork.txt -i NodeList.txt -o /path/to/my/outdir/fileprefix -F
 
-The final output (an edge list) will be in the file /path/to/my/outdir/fileprefix.FDRthresholded_mincutDensity0pt306_noDoublets.txt
+The final output (an edge list) will be in the file: /path/to/my/outdir/fileprefix.FDRthresholded_mincutDensity0pt306_noDoublets.txt
 
 b. 'FBT' analysis mode:
 NetNC_v2pt2.pl -n MyNetwork.txt -i NodeList.txt -o /path/to/my/outdir/fileprefix -M
 
-The final output as a node list will be located at /path/to/my/outdir/fileprefix_NFCS-mixturemodel.coherentNodes
-A network from the node where edges have bonferroni corrected -log(p)<=0.05 is output to
-/path/to/my/outdir/fileprefix_NFCS-mixturemodel.coherentNet.txt
+The final output as a node list will be located at: /path/to/my/outdir/fileprefix_NFCS-mixturemodel.coherentNodes
+Additionally, a network from the coherent nodes in the above file and where edges have bonferroni 
+corrected -log(p)<=0.05 is output to: /path/to/my/outdir/fileprefix_NFCS-mixturemodel.coherentNet.txt
 
-Please see further details below
+Please see further details below.
 
 ##
 ## INTRODUCTION
@@ -436,12 +436,15 @@ NNCz10_FDR0pt1_mincutThresh0pt1.txt - The network of edges passing the minimum c
 
 
 ##
-## Contributors
+## Contributors and contact
 ##
 
 The NetNC software distribution was developed by Ian Overton, Jeremy Owen (iterative 
 minimum cut) and Alex Lubbock (Gaussian Mixture Modelling).
 
+NetNC is maintained by Ian Overton, who can be reached at: first_name_initial* dot overton at qub dot ac dot uk
+* substitute with i  
+Also see: go.qub.ac.uk/IanOverton
 
 ##
 ## Citing NetNC
