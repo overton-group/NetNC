@@ -178,6 +178,17 @@ NFCS threshold value determined by this procedure (please the manuscript methods
 section for further details). Of course functions in netNCmix.R may also be 
 called directly.
 
+4. A note on networks for use with NetNC
+NetNC requires a network as input, provided using the -n option. This network defines the 
+context for the analysis, providing the structure that enables NetNC to discover relationships
+within the input node list. Network nodes may be genes and the input list should be a subset 
+of the nodes in the network. NetNC might be usefully applied to any network and input list 
+across various complexity science application domains (biology, economics, social sciences, 
+telecommuincations, geography etc.). An example network for use with NetNC is DroFN, which is
+available from: https://www.ebi.ac.uk/biostudies/files/S-BSST460/DroFN.zip . DroFN is described
+in the citation at the end of this README. A further example network is described in Overton et 
+al. BMC Systems Biology 5, Article number: 68 (2011) and is available from the link below: 
+https://static-content.springer.com/esm/art%3A10.1186%2F1752-0509-5-68/MediaObjects/12918_2010_685_MOESM3_ESM.ZIP
 
 
 ##
