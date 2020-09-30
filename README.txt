@@ -462,6 +462,6 @@ Also see: go.qub.ac.uk/IanOverton
 ##
 
 If you use any of the code in this NetNC software distribution please cite:
-Overton IM, Sims A, Owen JA, Heale B, Ford M, Lubbock ALR, Pairo-Castineira E, Essafi E (2019).
-"Functionally Coherent Transcription Factor Target Networks Illuminate Control of Epithelial 
-Remodelling and Oncogenic Notch". BioRxiv 2019 https://doi.org/10.1101/455709v5
+Overton IM, Sims A, Owen JA, Heale B, Ford M, Lubbock ALR, Pairo-Castineira E, Essafi E (2020).'Functional 
+Transcription Factor Target Networks Illuminate Control of Epithelial Remodelling'. Cancers 12, 2823
+DOI: https://doi.org/10.3390/cancers12102823
